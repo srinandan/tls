@@ -1,0 +1,27 @@
+[ req ]
+default_bits		= 2048
+default_md		= sha256
+#default_keyfile 	= privkey.pem
+distinguished_name	= req_distinguished_name
+attributes		= req_attributes
+req_extensions          = v3_req
+prompt                  = no
+
+[ req_distinguished_name ]
+C                       = CA
+ST                      = Ontario
+L                       = Toronto
+O                       = Fazio Retail Inc
+OU                      = Fazio Online
+CN                      = Fazio Root CA 
+emailAddress            = srinandans@google.com
+
+[ req_attributes ]
+challengePassword		= A challenge password
+challengePassword_min		= 4
+challengePassword_max		= 20
+
+[ v3_req ]
+# Extensions to add to a certificate request
+basicConstraints = CA:TRUE
+keyUsage         = nonRepudiation, digitalSignature, keyEncipherment, dataEncipherment

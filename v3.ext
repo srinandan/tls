@@ -1,0 +1,9 @@
+basicConstraints=CA:FALSE
+subjectAltName=@my_subject_alt_names
+subjectKeyIdentifier = hash
+
+[ my_subject_alt_names ]
+DNS.1 = api.fazio.com
+DNS.2 = *.fazio.com
+IP.1  = 35.230.68.189
+IP.2  = 35.230.106.75

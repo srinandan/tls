@@ -1,0 +1,28 @@
+[ req ]
+default_bits		= 2048
+default_md		= sha256
+#default_keyfile 	= privkey.pem
+distinguished_name	= req_distinguished_name
+req_extensions          = v3_req
+prompt                  = no
+
+[ req_distinguished_name ]
+C                       = CA
+ST                      = Ontario
+L                       = Toronto
+O                       = Fazio Retail Inc 
+OU                      = Fazio Online
+CN                      = api.fazio.com
+emailAddress            = srinandans@google.com
+
+[ alt_names ]
+DNS.1 = api.fazio.com
+DNS.2 = *.fazio.com
+IP.1  = 35.230.68.189
+IP.2  = 35.203.180.241
+
+[ v3_req ]
+# Extensions to add to a certificate request
+basicConstraints = CA:FALSE
+keyUsage         = nonRepudiation, digitalSignature, keyEncipherment, dataEncipherment
+subjectAltName   = @alt_names
